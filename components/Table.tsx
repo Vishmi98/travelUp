@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { IoMan } from 'react-icons/io5'
