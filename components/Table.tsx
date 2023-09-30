@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { HiOutlineLocationMarker } from 'react-icons/hi'
 import { IoMan } from 'react-icons/io5'
 import { BiCalendar } from 'react-icons/bi'
 
 const Table = () => {
+    const [isOpen, setIsOpen] = useState(1);
+
+    const handleClick = (index: number) => {
+        setIsOpen(index);
+    }
+
     const bannerItem = [
         {
             "icon": <HiOutlineLocationMarker size={20} className='text-yellow-600' />,
@@ -34,7 +40,7 @@ const Table = () => {
     return (
         <div className=''>
             <div className='flex'>
-                <div className='bg-white py-2 px-4 text-xs text-sky-500 font-semibold border border-sky-500 rounded-t-lg'>flight</div>
+                <div className='bg-white py-2 px-4 text-xs text-sky-500 font-semibold border border-sky-500 rounded-t-lg' onClick={() => handleClick(1)}>flight</div>
                 <div className='bg-blue-500 py-2 px-4 text-white text-xs font-semibold border border-sky-500 rounded-t-lg'>hotels</div>
                 <div className='bg-blue-500 text-white py-2 px-4 text-xs font-semibold border border-sky-500 rounded-t-lg'>flight + hotels</div>
             </div>
